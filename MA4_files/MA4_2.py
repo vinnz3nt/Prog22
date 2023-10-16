@@ -10,7 +10,7 @@ def main():
 	f.setAge(51)
 	print(f.getAge())
 	print(f.getDecades())
-	print('wassap')
+
 
 if __name__ == '__main__':
 	main()
