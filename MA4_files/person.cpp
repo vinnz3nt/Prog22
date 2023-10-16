@@ -7,6 +7,8 @@ class Person{
 		int getAge();
 		void setAge(int);
 		double getDecades();
+		int fib();
+		int fibonacci(int);
 	private:
 		int age;
 	};
@@ -27,6 +29,13 @@ double Person::getDecades(){
 	return age/10.0;
 	}
 
+int Person::fib(){
+	return fibonacci(age);
+}
+
+int Person::fibonacci(int age){
+
+}
 
 extern "C"{
 	Person* Person_new(int a) {return new Person(a);}
