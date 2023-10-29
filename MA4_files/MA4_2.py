@@ -6,7 +6,7 @@ def main():
 	f = Person(50)
 	print(f.getAge())
 	print(f.getDecades())
-	print(f.fib())
+	#print(f.fib())
 
 	f.setAge(51)
 	print(f.getAge())

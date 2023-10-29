@@ -50,8 +50,8 @@ extern "C"{
 	int Person_getAge(Person* person) {return person->getAge();}
 	void Person_setAge(Person* person, int a) {person->setAge(a);}
 	double Person_getDecades(Person* person) {return person->getDecades();}
-	int Person_fib(Person* person) {return person -> fib();}
-	int person_fibonacci(Person* person, int age) {return person -> fibonacci(age);}
+	//int Person_fib(Person* person) {return person -> fib();}
+	//int person_fibonacci(Person* person, int age) {return person -> fibonacci(age);}//
 	void Person_delete(Person* person){
 		if (person){
 			delete person;
