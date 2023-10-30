@@ -8,8 +8,8 @@ class Person{
 		void setAge(int);
 		double getDecades();
 		int fib();
-		int fibonacci(int);
 	private:
+		int fibonacci(int);
 		int age;
 	};
  
@@ -33,15 +33,15 @@ int Person::fib(){
 	return fibonacci(age);
 }
 
-int Person::fibonacci(int age){
-	 if(age == 0){
+int Person::fibonacci(int a){
+	 if(a == 0){
 		return 0;
 		}
-	 else if(age == 1){
+	 else if(a == 1){
 		return 1;
 		}
 	 else{
-		return fibonacci(age - 1)+fibonacci(age - 2);
+		return fibonacci(a - 1)+fibonacci(a - 2);
 		}
 }
 
@@ -50,8 +50,8 @@ extern "C"{
 	int Person_getAge(Person* person) {return person->getAge();}
 	void Person_setAge(Person* person, int a) {person->setAge(a);}
 	double Person_getDecades(Person* person) {return person->getDecades();}
-	//int Person_fib(Person* person) {return person -> fib();}
-	//int person_fibonacci(Person* person, int age) {return person -> fibonacci(age);}//
+	int Person_fib(Person* person) {return person -> fib();}
+	//int person_fibonacci(Person* person, int a) {return person -> fibonacci(a);}
 	void Person_delete(Person* person){
 		if (person){
 			delete person;
