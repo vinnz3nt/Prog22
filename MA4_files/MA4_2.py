@@ -31,7 +31,7 @@ def main():
     y_py = []
     y_num = []
     y_per = []
-    x_vals = list(range(20,30))
+    x_vals = list(range(20,25))
     f = Person(10)
     for x in x_vals:
         start_py = 0
@@ -71,7 +71,7 @@ def main():
     plt.ylabel('Time')
     plt.title('Time for fib')
     plt.legend()
-    plt.show()
+    plt.savefig('myplot.png')
 
 if __name__ == '__main__':
 	main()
