@@ -3,7 +3,9 @@
 from person import Person
 from time import perf_counter as pc
 from numba import njit
-import matplotlib.pyplot as plt
+import matplotlib 
+matplotlib.use('Agg')
+import pylab as pl
 
 
 
@@ -64,14 +66,14 @@ def main():
 
 
 
-    plt.scatter(x_vals, y_num, label='Numba', color='blue', marker='.')
-    plt.scatter(x_vals, y_py, label='Just python', color='red', marker='.')
-    plt.scatter(x_vals,y_per, label = "C++", color = 'green', marker = '.')
-    plt.xlabel('N')
-    plt.ylabel('Time')
-    plt.title('Time for fib')
-    plt.legend()
-    plt.show()
+    pl.scatter(x_vals, y_num, label='Numba', color='blue', marker='.')
+    pl.scatter(x_vals, y_py, label='Just python', color='red', marker='.')
+    pl.scatter(x_vals,y_per, label = "C++", color = 'green', marker = '.')
+    pl.xlabel('N')
+    pl.ylabel('Time')
+    pl.title('Time for fib')
+    pl.legend()
+    pl.save('plot2.png')
 
 if __name__ == '__main__':
 	main()
