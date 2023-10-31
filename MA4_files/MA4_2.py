@@ -1,8 +1,10 @@
 # #!/usr/bin/env python3
-
+import matplotlib
+matplotlib.use('Agg')
 from person import Person
 from time import perf_counter as pc
 from numba import njit
+
 import matplotlib.pyplot as plt
 
 
@@ -62,8 +64,6 @@ def main():
 		
         y_per.append(stop_per-start_per)
 
-
-
     plt.scatter(x_vals, y_num, label='Numba', color='blue', marker='.')
     plt.scatter(x_vals, y_py, label='Just python', color='red', marker='.')
     plt.scatter(x_vals,y_per, label = "C++", color = 'green', marker = '.')
@@ -71,9 +71,8 @@ def main():
     plt.ylabel('Time')
     plt.title('Time for fib')
     plt.legend()
-    plt.savefig('myplot.png')
+    plt.savefig('/Users/vincentdahlberg/Desktop/myfigure.PNG')
+    plt.show()
 
 if __name__ == '__main__':
 	main()
-
-
